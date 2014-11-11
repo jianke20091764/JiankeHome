@@ -1,0 +1,42 @@
+<!Doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<title><%= title %></title>
+	    <link rel="shortcut icon" href="http://tuan.qunar.com/static/icon/favicon.ico">
+	    <link rel="stylesheet" type="text/css" href="/css/common/jquery.mobile-1.3.2.min.css"/>
+	    <script type="text/javascript" src="/js/common/jquery-1.9.1.min.js"></script>
+	    <script type="text/javascript" src="/js/common/jquery.mobile-1.3.2.min.js"></script>
+	</head>
+	<body>
+	<style>
+  #myResult{
+    border: 1px solid;
+    border-color: #108040;
+    padding: 10px;
+    }
+  </style>
+  <div data-role="page">
+ 
+  <div data-role="content">
+    <input type="button" value="http://foo.com/a/file.html" id="button1" class="myButton" data-inline="true" />
+    <input type="button" value="//foo.com/a/file.html" id="button2" class="myButton" data-inline="true" />
+    <input type="button" value="/a/file.html" id="button3" class="myButton" data-inline="true" />
+    <input type="button" value="file.html" id="button4" class="myButton" data-inline="true" />
+    <input type="button" value="?a=1&b=2" id="button5" class="myButton" data-inline="true" />
+    <input type="button" value="#foo" id="button6" class="myButton" data-inline="true" />
+    <div id="myResult">The result will be displayed here</div>
+  </div>
+</div>
+<script>
+$(document).ready(function() { 
+   $( ".myButton" ).on( "click", function() { 
+      var isRel = $.mobile.path.isRelativeUrl( $( this ).attr( "value" ) ); 
+    $( "#myResult" ).html( String( isRel ) );
+ }) 
+});
+</script>
+  
+	</body>
+</html>

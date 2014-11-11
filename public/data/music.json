@@ -1,0 +1,50 @@
+{
+	"item" : "Music" ,
+	"type" : "music" ,
+	"data" : [
+	     {
+	    	 "id" : "0",
+	    	 "name" : "Ban Cheng Yan Sha" ,
+	    	 "abbr" : "bcys",
+	    	 "mode" : "mp3"
+	     },
+	     {
+	    	 "id" : "1",
+	    	 "name" : "Luo Hua" ,
+	    	 "abbr" : "luohua",
+	    	 "mode" : "mp3"
+	     },
+	     {
+	    	 "id" : "2",
+	    	 "name" : "Mei Gui Hua De Zang Li" ,
+	    	 "abbr" : "mghdzl",
+	    	 "mode" : "mp3"
+	     },
+	     {
+	    	 "id" : "3",
+	    	 "name" : "Tou Wen Zi D" ,
+	    	 "abbr" : "touwenzid",
+	    	 "mode" : "mp3"
+	     },
+	     {
+	    	 "id" : "4",
+	    	 "name" : "Wen Xin Wu Kui" ,
+	    	 "abbr" : "wxwk",
+	    	 "mode" : "mp3"
+	     },
+	     {
+	    	 "id" : "5",
+	    	 "name" : "Tian Xia" ,
+	    	 "abbr" : "tianxia",
+	    	 "mode" : "mp3"
+	     }
+	     ,
+	     {
+	    	 "id" : "6",
+	    	 "name" : "Tou Wen Zi D" ,
+	    	 "abbr" : "test1",
+	    	 "mode" : "mp4"
+	     }
+	 ],
+	 "author" : "jianke"
+}

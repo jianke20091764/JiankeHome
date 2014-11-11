@@ -1,0 +1,16 @@
+{
+	'type' : 'user' ,
+	'data' : [
+	    {
+	    	'name' : 'admin' ,
+	    	'pwd' : '123454321' ,
+	    	'role' : 'root'
+	    },
+	    {
+	    	'name': 'jianke'
+	    	'pwd' : '123456',
+	    	'role' : 'guest'
+	    }
+	 ],
+	'author': 'jianke' 
+}

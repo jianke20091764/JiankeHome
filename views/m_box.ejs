@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title><%= title %></title>
+    <link href="/img/favicon.ico" type="image/x-icon" rel="icon">
+	<link href="/img/favicon.ico" type="image/x-icon" rel="shortcut icon">  
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap-responsive.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/m_box.css"/>
+	<style type="text/css">
+		body{
+			padding-top:60px;
+			padding-bottom:40px;
+		}	
+	</style>	
+</head>
+<body>
+	<%- partial("./common/header",{headerNav:''}) %>
+    <div class="container">
+    	<video id="music-box" style="margin:0 auto; width:inherit;" controls="controls" loop="loop">
+			<source class="<%= name %>" src="audio/<%= name %>.<%= mode %>" />
+		</video>
+		<div class="panel" id="playPanel">
+            <div class="left-panel" id="leftPanel">
+                <ul class="play-btn">
+                    <li class="prev">
+                        <a class="btn-prv" hidefocus="true" title="上一首[←]"><span class="wg-button-inner"></span></a>
+                    </li>
+                    <li class="play" title="暂停[空格键]">
+                        <a class="btn-play" hidefocus="true"><span class="wg-button-inner"></span></a>
+                    </li>
+                    <li class="next">
+                        <a class="btn-next" hidefocus="true" title="下一首[→]"><span class="wg-button-inner"></span></a>
+                    </li>
+                </ul>
+            </div>         
+        </div>
+    </div>
+   <%- partial("./common/footer") %>
+<script type="text/javascript" src="/js/jquery-1.8.2.js"></script>
+<script type="text/javascript" src="/js/bootstrap.js"></script>
+<script type="text/javascript" src="/js/m_box.js"></script>
+
+</body>
+</html>

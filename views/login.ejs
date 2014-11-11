@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title><%= title %></title>
+	<link rel="shortcut icon" href="http://tuan.qunar.com/static/icon/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap-responsive.css"/>
+	<style type="text/css">
+		body{
+			padding-top:60px;
+			padding-bottom:40px;
+		}	
+	</style>	
+</head>
+<body>
+	<%- partial("./common/header",{headerNav : 'login'}) %>
+	<div id="container" class="container">
+		<form class="form-horizontal" action="/index" method="post">
+			<fieldset>
+				<legend>用户登入</legend>
+				<div class="control-group">
+					<label class="control-label" for="username">用户名</label>
+					<div class="controls">
+						<input type="text" class="input-large" id="username" name="username"/>
+						
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="password">口令</label>
+					<div class="controls">
+						<input type="password" class="input-large" id="password" name="password"/>
+					</div>
+				</div>				
+				<div class="form-actions">
+					<button type="submit" class="btn btn-primary">登录</button>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+    <%- partial("./common/footer") %>
+<script type="text/javascript" src="/js/jquery-1.8.2.js"></script>
+<script type="text/javascript" src="/js/bootstrap.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+.panel{background: url(/img/m_box.png) 0px -936px repeat-x; height: 75px; width: 100%; overflow-y: hidden;}
+.left-panel {width: 170px;height: 100%; float:left; padding:0 500px;}
+.play-btn {height: 45px;margin: 20px 0 20px 24px;list-style: none;padding: 0;}
+.play-btn li {list-style: none;padding: 0;float: left;}
+.play-btn .play, .play-btn .stop {margin: 0 29px;}
+.play a {text-indent: -999px;display: block !important;float: left;width: 29px;height: 40px;}
+.play a {background: url(//mu8.bdstatic.com/player/t/i/q3aJ474c.png) no-repeat -120px -276px;}
+.play a:hover {background: url(/img/m_box.png) no-repeat 0px -1px;}
+.play a.wg-button-active {background: url(/img/m_box.png) no-repeat 0px 0px;}
+.stop a {background: url(/img/m_box.png) no-repeat -132px -168px;}
+.stop a:hover {background: url(/img/m_box.png) no-repeat -120px -229px;}
+.stop a.wg-button-active {background: url(/img/m_box.png) no-repeat -120px -228px;}
+.prev a, .next a {text-indent: -999px;display: block !important;float: left;width: 21px;height: 21px;margin-top: 9px;}
+.prev a {background: url(/img/m_box.png) no-repeat -168px -696px;}
+.prev a:hover {background: url(/img/m_box.png) no-repeat -144px -612px;}
+.prev a.wg-button-active {background: url(/img/m_box.png) no-repeat -144px -611px;}
+.next a {background: url(/img/m_box.png) no-repeat -168px -649px;}
+.next a:hover {background: url(/img/m_box.png) no-repeat -143px -348px;}
+.next a.wg-button-active {background: url(/img/m_box.png) no-repeat -143px -347px;}

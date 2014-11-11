@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title><%= title %></title>
+    <link href="/img/favicon.ico" type="image/x-icon" rel="icon">
+	<link href="/img/favicon.ico" type="image/x-icon" rel="shortcut icon">    
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css"/>    
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap-responsive.css"/>
+	<style type="text/css">	
+		.sider-left{}
+		.content{padding-top:60px;padding-bottom:40px; min-height:750px;}
+		.sub-title{margin:0 0 0 40px;}
+		.note-model{ top:25%;}
+		.ui-mask{position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 1035; opacity: 0.2; background-color: rgb(0, 0, 0);}		
+		#toTop{width:54px;height:54px;display:block;position:fixed;right:25px;bottom:45px;background-position:-700px -110px;opacity:0.3;filter:alpha(opacity=30);background-image:url(/img/toTop.png); background-repeat:no-repeat;}
+		#toTop:hover{opacity:1;filter:alpha(opacity=100);}
+	</style>
+</head>
+<body>	
+   <%- partial("./common/header",{headerNav : 'home'}) %>
+   <div class="container content">
+   		<div class="row">
+        	<div class="span2 sider-left">            	
+            	<ul class="nav nav-stacked nav-tabs">
+                    <li>
+                        <a href="#music"><i class="icon-music"></i>Music</a>
+                    </li>
+                    <li>
+                        <a href="#reading"><i class="icon-book"></i>Reading</a>
+                    </li>
+                    <li>
+                        <a href="#note"><i class="icon-pencil"></i>Note</a>
+                    </li>
+                </ul>
+                <div>
+                	<canvas id="clock" width="150" height="150"></canvas>
+                </div>
+            </div>
+            
+            <div class="span10">
+            	<div class="row">                	
+                    <h2 id="music" class="sub-title">Music</h2>                    
+                    <div class="span7">
+                        <ul class="nav nav-pills">
+                            <% for(var i = 0; i < data.length ; i ++){%>
+                            	<li><a class="music" data-music="<%= data[i].abbr %>" href="javascript:void(0);"><%= data[i].name %></a></li>
+                            <% }%>
+                        </ul>
+                    </div>
+                    <div class="span3">
+                        <video id="musicBox" style="margin:0 auto; width:inherit;" controls="controls" loop="loop" src='/audio/<%= data[0].abbr %>.mp3'>                               
+                        </video>
+                    </div>                    
+                </div>
+                <hr/>
+                <div class="row">                	
+                    <h2 id="reading" class="sub-title">Reading</h2>
+                    <a class="edit-btn" data-edit="reading" href="javascript:void(0);"><i class="icon-edit pull-right"></i></a>                    
+                    <div class="span10">
+                        <ul class="nav nav-pills">
+                            <li><a href="#">1111</a></li>
+                            <li><a href="#">1111</a></li>
+                            <li><a href="#">1111fadfasdf</a></li>
+                            <li><a href="#">1111</a></li>
+                            <li><a href="#">1111</a></li>
+                            <li><a href="#">1111fadfasdf</a></li>
+                            <li><a href="#">1111fadfasdf</a></li>
+                            <li><a href="#">1111fadfasdf</a></li>
+                            <li><a href="#">1111fadfasdf</a></li>
+                        </ul>
+                    </div>                   
+                     <div class="modal note-model modal-reading" style="display:none;">
+              			<div class="modal-header">
+                			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                			<h3>Reading</h3>
+             		 	</div>
+                         <div class="modal-body">                             
+                            <form class="form-horizontal form-inline">
+                                <div class="control-group">
+                                    <label class="control-label" for="inputEmail">Title:</label>
+                                    <div class="controls">
+                                        <input type="text" id="inputEmail" placeholder="Title">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="inputEmail">URL:</label>
+                                    <div class="controls">
+                                        <input type="url" id="inputEmail" placeholder="URL">
+                                    </div>
+                                </div>                                                        
+                            </form>                           
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#" class="btn">Close</a>
+                            <a href="#" class="btn btn-primary">Add Reading</a>
+                        </div>
+            		</div>                   
+                </div>
+                <hr/>
+                 <div class="row">                	
+                    <h2 id="note" class="sub-title">Note</h2>
+                    <a class="edit-btn" data-edit="note" href="javascript:void(0);"><i class="icon-edit pull-right"></i></a>                      
+                    <div class="span10">
+                        <ul class="nav nav-pills">
+                            <li><a href="#">1111</a></li>
+                            <li><a href="#">1111</a></li>
+                            <li><a href="#">1111fadfasdf</a></li>
+                            <li><a href="#">1111</a></li>
+                            <li><a href="#">1111</a></li>
+                            <li><a href="#">1111fadfasdf</a></li>
+                            <li><a href="#">1111fadfasdf</a></li>
+                            <li><a href="#">1111fadfasdf</a></li>
+                            <li><a href="#">1111fadfasdf</a></li>
+                        </ul>
+                    </div>
+                    <div class="modal note-model" style="display:none;">
+              			<div class="modal-header">
+                			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                			<h3>Modal header</h3>
+             		 	</div>
+                         <div class="modal-body">
+                            <p>One fine body…</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#" class="btn">Close</a>
+                            <a href="#" class="btn btn-primary">Save changes</a>
+                        </div>
+            		</div>
+                     <div class="modal note-model modal-note" style="display:none;">
+              			<div class="modal-header">
+                			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                			<h3>Note</h3>
+             		 	</div>
+                         <div class="modal-body">                             
+                              <form class="form-horizontal form-inline">
+                                <div class="control-group">
+                                    <label class="control-label" for="inputEmail">Title:</label>
+                                    <div class="controls">
+                                        <input type="text" id="inputEmail" placeholder="Title">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="inputEmail">Date:</label>
+                                    <div class="controls">
+                                        <input type='date' id="inputEmail" placeholder="Date">
+                                    </div>
+                                </div>
+                                 <div class="control-group">
+                                    <label class="control-label" for="inputEmail">Content:</label>
+                                    <div class="controls">
+                                        <textarea rows="4"></textarea>
+                                    </div>
+                                </div>                                                    
+                            </form> 
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#" class="btn">Close</a>
+                            <a href="#" class="btn btn-primary">Add Note</a>
+                        </div>
+            		</div>                              
+                </div>                    	            	
+            </div>
+        </div>   
+    </div>	
+    <%- partial("./common/footer") %>
+     <div class="ui-mask" style="display:none;"></div>
+     <a href="#" target="_self" id="toTop" title="返回顶部" onclick="window.scrollTo(0,0);return false" style="display: none;"></a>
+</body>
+
+<script type="text/javascript" src="/js/jquery-1.8.2.js"></script>
+<script type="text/javascript" src="/js/bootstrap.js"></script>
+<script type="text/javascript" src="/js/home-page.js"></script>
+
+</html>
